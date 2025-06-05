@@ -16,20 +16,9 @@ import android.bluetooth.BluetoothProfile;
 
 public final class PythonBluetoothGattCallback extends BluetoothGattCallback
 {
-    public interface Interface
-    {
-        public void onConnectionStateChange(int status, int newState);
-        public void onMtuChanged(int mtu, int status);
-        public void onServicesDiscovered(int status);
-        public void onCharacteristicChanged(int handle, byte[] value);
-        public void onCharacteristicRead(int handle, int status, byte[] value);
-        public void onCharacteristicWrite(int handle, int status);
-        public void onDescriptorRead(String uuid, int status, byte[] value);
-        public void onDescriptorWrite(String uuid, int status);
-    }
-    private Interface callback;
+    private PythonBluetoothGattInterface callback;
 
-    public PythonBluetoothGattCallback(Interface pythonCallback)
+    public PythonBluetoothGattCallback(PythonBluetoothGattInterface pythonCallback)
     {
         callback = pythonCallback;
     }

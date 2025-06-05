@@ -277,7 +277,7 @@ class BleakScannerP4Android(BaseBleakScanner):
 
 
 class _PythonScanCallback(utils.AsyncJavaCallbacks):
-    __javainterfaces__ = ["com.github.hbldh.bleak.PythonScanCallback$Interface"]
+    __javainterfaces__ = ["com.github.hbldh.bleak.PythonScanInterface"]
 
     def __init__(self, scanner: BleakScannerP4Android, loop: asyncio.AbstractEventLoop):
         super().__init__(loop)

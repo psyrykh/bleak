@@ -448,7 +448,7 @@ class BleakClientP4Android(BaseBleakClient):
 
 class _PythonBluetoothGattCallback(utils.AsyncJavaCallbacks):
     __javainterfaces__ = [
-        "com.github.hbldh.bleak.PythonBluetoothGattCallback$Interface"
+        "com.github.hbldh.bleak.PythonBluetoothGattInterface"
     ]
 
     def __init__(self, client, loop):

@@ -7,14 +7,9 @@ import android.bluetooth.le.ScanResult;
 
 public final class PythonScanCallback extends ScanCallback
 {
-    public interface Interface
-    {
-        public void onScanFailed(int code);
-        public void onScanResult(ScanResult result);
-    }
-    private Interface callback;
+    private PythonScanInterface callback;
 
-    public PythonScanCallback(Interface pythonCallback)
+    public PythonScanCallback(PythonScanInterface pythonCallback)
     {
         callback = pythonCallback;
     }
